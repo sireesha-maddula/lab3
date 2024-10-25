@@ -15,7 +15,7 @@ phases:
   post_build:
     commands:
       - echo Pushing the Docker image to ECR...
-      - docker push 864899837235.dkr.ecr.ap-south-1.amazonaws.com/training/mywebsiteforecs:latest
+      - docker push 864899837235.dkr.ecr.ap-south-1.amazonaws.com/sindhu/myrepo:latest
       - echo Writing image definitions file...
       - printf '[{"name":"user8-container","imageUri":"%s"}]' 864899837235.dkr.ecr.ap-south-1.amazonaws.com/sindhu/myrepo:latest > imagedefinitions.json
 
